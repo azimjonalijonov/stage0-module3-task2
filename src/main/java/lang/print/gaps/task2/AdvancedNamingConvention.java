@@ -8,9 +8,12 @@ public class AdvancedNamingConvention {
 
     void cAllToFriend() {
         //some code
+        System.out.println(age);
     }
 
     void callByNumber(int number) {
         //some code
+        age = number;
+        System.out.println(age);
     }
 }
