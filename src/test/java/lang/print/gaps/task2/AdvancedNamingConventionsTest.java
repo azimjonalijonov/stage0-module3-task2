@@ -20,7 +20,7 @@ class AdvancedNamingConventionsTest {
                 .filter(line ->
                         line.contains("class AdvancedNamingConvention") ||
                                 line.contains("adultAge") ||
-                                line.contains("age") ||
+                                line.contains("age;") ||
                                 line.contains("void callToFriend") ||
                                 line.contains("void callByNumber(int number)"))
                 .collect(Collectors.toList());
