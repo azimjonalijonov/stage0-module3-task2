@@ -18,11 +18,11 @@ class AdvancedNamingConventionsTest {
         List<String> strings = Files.readAllLines(path);
         List<String> result = strings.stream()
                 .filter(line ->
-                        line.contains("AdvancedNamingConvention") ||
-                                line.contains("adultAge") ||
-                                line.contains("age") ||
-                                line.contains("callToFriend") ||
-                                line.contains("callByNumber(number)"))
+                        line.contains("public class AdvancedNamingConvention;") ||
+                                line.contains(" private static final int adultAge =19;") ||
+                                line.contains("private int age;\n") ||
+                                line.contains("void cAllToFriend() {\n") ||
+                                line.contains("void callByNumber(int number) {\n"))
                 .collect(Collectors.toList());
 
         assertEquals(5, result.size(), "Not all conventions were followed. Check what to call classes variables and methods.");

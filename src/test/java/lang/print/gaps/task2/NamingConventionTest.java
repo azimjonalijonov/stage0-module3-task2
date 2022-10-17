@@ -18,15 +18,15 @@ class NamingConventionTest {
         List<String> strings = Files.readAllLines(path);
         List<String> result = strings.stream()
                 .filter(line ->
-                                line.contains("variable") ||
-                                line.contains("variableOne") ||
-                                line.contains("variableTwo") ||
-                                line.contains("variableThree") ||
-                                line.contains("VARIABLE_FOUR") ||
-                                line.contains("VARIABLE_FIVE") ||
-                                line.contains("variableSix") ||
-                                line.contains("variableSeven") ||
-                                line.contains("variableEight"))
+                                line.contains("int variable = 10;\n") ||
+                                line.contains("int variableOne = 1;\n") ||
+                                line.contains("int variableTwo = 2;\n") ||
+                                line.contains("int variableThree = 3;\n") ||
+                                line.contains("final int VARIABLE_FOUR = 4;\n") ||
+                                line.contains("final int VARIABLE_FIVE = 5;\n") ||
+                                line.contains("int variableSix = 6;\n") ||
+                                line.contains("int variableSeven = 7;\n") ||
+                                line.contains("int variableEight = 8;\n"))
                 .collect(Collectors.toList());
 
         assertEquals(9, result.size(), "You should follow the case that is used for variable name:" +
